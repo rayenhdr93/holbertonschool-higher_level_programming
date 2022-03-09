@@ -1,2 +1,2 @@
 -- comments
-SHOW CREATE TABLE first_table;
+SHOW TABLE STATUS first_table;
