@@ -8,7 +8,7 @@ function fact (n) {
 }
 const process = require('process');
 if (isNaN(process.argv[2])) {
-  console.log('NaN');
+  console.log('1');
 } else {
   fact(process.argv[2]);
 }
