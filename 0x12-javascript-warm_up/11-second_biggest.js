@@ -12,12 +12,12 @@ if (process.argv.length <= 3) {
     y = s;
   }
   for (let i = 4; i < process.argv.length + 1; i++) {
-    if ((process.argv[i] > x)) {
+    if ((parseInt(process.argv[i]) > x)) {
       y = x;
-      x = process.argv[i];
+      x = parseInt(process.argv[i]);
     }
-    if ((process.argv[i] < x) && (process.argv[i] > y)) {
-      y = process.argv[i];
+    if ((parseInt(process.argv[i]) < x) && (parseInt(process.argv[i]) > y)) {
+      y = parseInt(process.argv[i]);
     }
   }
   console.log(y);
