@@ -16,7 +16,7 @@ if __name__ == "__main__":
     str = ""
     for row in query_rows:
         str = str + row[0] + " "
-    if (str != ""):
-        print(str)
+    str = str[:-1]
+    print(str)
     cur.close()
     conn.close()
