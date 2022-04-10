@@ -15,8 +15,11 @@ if __name__ == "__main__":
     query_rows = cur.fetchall()
     str = ""
     for row in query_rows:
-        str = str + row[0] + " "
-    str = str[:-1]
-    print(str)
+        str = str + row[0] + ", "
+    if (len(str) >= 2):
+        str = str[:-2]
+        print(str)
+    else:
+        print()
     cur.close()
     conn.close()
