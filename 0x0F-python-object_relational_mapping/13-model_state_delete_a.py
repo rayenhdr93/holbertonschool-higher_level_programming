@@ -16,7 +16,6 @@ if __name__ == "__main__":
     session = Session(engine)
     for state in session.query(State).order_by(State.id).all():
         if ('a' in state.name):
-            obj = session.query(State).get(state.id)
-            session.delete(obj)
+            session.delete(state)
     session.commit()
     session.close()
