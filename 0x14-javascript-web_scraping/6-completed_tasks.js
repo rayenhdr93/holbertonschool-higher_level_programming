@@ -1,8 +1,9 @@
 #!/usr/bin/node
 const axios = require('axios').default;
-axios.get('https://jsonplaceholder.typicode.com/todos')
+const dict = {};
+const process = require('process');
+axios.get(process.argv[2])
   .then(function (response) {
-    const dict = {};
     for (let x = 0; x < response.data.length; x++) {
       if (response.data[x].completed === true) {
         dict[response.data[x].userId] = 0;
