@@ -1,7 +1,10 @@
 #!/usr/bin/node
 const axios = require('axios').default;
-const myArgs = process.argv.slice(2);
-axios.get(myArgs[0])
+const process = require('process');
+axios.get(process.argv[2])
+  .then(function (response) {
+    console.log('code:', response.status);
+  })
   .catch(function (error) {
     console.log('code:', error.response.status);
   });
