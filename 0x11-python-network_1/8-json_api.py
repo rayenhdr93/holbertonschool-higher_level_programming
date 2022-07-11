@@ -13,9 +13,9 @@ if __name__ == '__main__':
     je = {}
     try:
         je = req.json()
+        if len(je):
+            print('[{}] {}'.format(je['id'], je['name']))
+        else:
+            print('No result')
     except Exception:
         print('Not a valid JSON')
-    if len(je):
-            print('[{}] {}'.format(je['id'], je['name']))
-    else:
-        print('No result')
